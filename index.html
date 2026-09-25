@@ -298,7 +298,7 @@ img, svg { max-width: 100%; }
 .dot-one { left: 17%; bottom: 18%; background: var(--orange); }
 .dot-two { right: 4%; top: 8%; background: var(--blue); }
 
-.book-card, .pencil-card, .brain-card, .child-card {
+.book-card, .pencil-card, .check-card, .child-card {
   position: absolute;
   z-index: 3;
   filter: drop-shadow(0 20px 25px rgba(50,50,50,.13));
@@ -369,36 +369,46 @@ img, svg { max-width: 100%; }
   background: var(--pink);
 }
 
-.brain-card {
-  width: 125px;
-  height: 110px;
-  right: 10%;
-  bottom: 15%;
-  border-radius: 50% 45% 50% 45%;
-  background: #fff;
+.check-card {
+  width: 108px;
+  height: 100px;
+  right: 9%;
+  bottom: 16%;
+  border-radius: 46% 54% 58% 42% / 58% 50% 50% 42%;
+  background: var(--blue);
   border: 5px solid var(--pink);
-  transform: rotate(6deg);
+  transform: rotate(4deg);
 }
-.brain-half {
-  position: absolute;
-  top: 18px;
-  width: 42px;
-  height: 63px;
-  border: 3px solid var(--blue);
-  border-radius: 50%;
-}
-.left-half { left: 13px; }
-.right-half { right: 13px; }
-.brain-line {
+.check-mark {
   position: absolute;
   left: 50%;
-  top: 15px;
-  bottom: 14px;
-  width: 3px;
-  transform: translateX(-50%);
-  background: var(--orange);
+  top: 52%;
+  width: 46px;
+  height: 32px;
+  transform: translate(-50%, -50%) rotate(-4deg);
 }
-.brain-spark { position: absolute; left: 49px; bottom: 2px; color: var(--pink); }
+.check-mark::before,
+.check-mark::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+}
+.check-mark::before {
+  width: 9px;
+  height: 17px;
+  left: 0;
+  top: 9px;
+  transform: rotate(45deg);
+}
+.check-mark::after {
+  width: 9px;
+  height: 32px;
+  left: 15px;
+  top: -6px;
+  transform: rotate(-45deg);
+}
+.check-spark { position: absolute; left: -6px; bottom: -8px; color: var(--pink); }
 
 .child-card {
   left: 50%;
@@ -1092,7 +1102,7 @@ img, svg { max-width: 100%; }
   .hero-art { min-height: 370px; transform: scale(.88); margin-top: -10px; }
   .art-blob-main { width: 290px; height: 290px; }
   .book-card { left: 2%; bottom: 15%; transform: scale(.8) rotate(-8deg); transform-origin: left bottom; }
-  .brain-card { right: 0; bottom: 13%; transform: scale(.78) rotate(6deg); transform-origin: right bottom; }
+  .check-card { right: 0; bottom: 13%; transform: scale(.78) rotate(6deg); transform-origin: right bottom; }
   .pencil-card { right: -4%; top: 17%; transform: scale(.78) rotate(-24deg); }
   .child-card { transform: translate(-49%, -46%) scale(.82); }
   .hero-dots { right: -10px; }
@@ -1218,11 +1228,9 @@ img, svg { max-width: 100%; }
             <span class="pencil-eraser"></span>
           </div>
 
-          <div class="brain-card">
-            <div class="brain-line"></div>
-            <div class="brain-half left-half"></div>
-            <div class="brain-half right-half"></div>
-            <span class="brain-spark">♡</span>
+          <div class="check-card">
+            <span class="check-mark"></span>
+            <span class="check-spark">✦</span>
           </div>
 
           <div class="child-card">
@@ -1476,14 +1484,14 @@ img, svg { max-width: 100%; }
             <div>
               <small>Endereço</small>
               <address>
-                Rua Marechal Rondon, nº 30<br>
+                Rua Marechal Rondon, nº 34<br>
                 Bairro Cidade Nova<br>
                 Santana do Paraíso — MG
               </address>
             </div>
           </div>
 
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rua+Marechal+Rondon+30+Cidade+Nova+Santana+do+Paraiso+MG" target="_blank" rel="noopener noreferrer">
+          <a class="map-link" href="https://www.google.com/maps/place/R.+Mal.+Rondon,+34,+Santana+do+Para%C3%ADso+-+MG,+35167-000/@-19.4708436,-42.5085119,1471m/data=!3m2!1e3!4b1!4m6!3m5!1s0xb000fc0977838d:0xf9f03b0c14e8f23c!8m2!3d-19.4708436!4d-42.505937!16s%2Fg%2F11t88tjwwr?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             Ver localização no Google Maps <span>↗</span>
           </a>
         </div>
