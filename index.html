@@ -127,7 +127,7 @@ img, svg { max-width: 100%; }
   font-weight: 800;
   letter-spacing: .035em;
 }
-.brand-name span, .footer-brand span { color: var(--pink); }
+.brand-name span, .footer-brand span { color: var(--pink); margin: 0 .14em; }
 
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav a {
@@ -947,6 +947,27 @@ img, svg { max-width: 100%; }
 .schedule-icon { color: var(--orange); font-size: 1.7rem; }
 .schedule-box strong { font-size: .9rem; }
 .schedule-box p { margin: 2px 0 0; color: var(--muted); font-size: .78rem; }
+.shift-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.shift-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: .74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.shift-pill .shift-icon { font-size: .85rem; }
+.shift-morning { background: var(--pink); }
+.shift-afternoon { background: var(--blue-dark); }
+.shift-evening { background: var(--green); }
+@media (max-width: 560px) {
+  .shift-pills { gap: 5px; }
+  .shift-pill { font-size: .62rem; padding: 4px 7px; gap: 3px; }
+  .shift-pill .shift-icon { font-size: .7rem; }
+}
 
 /* PROFESSIONAL */
 .professional-section { background: var(--cream); }
@@ -1664,6 +1685,11 @@ img, svg { max-width: 100%; }
           <div>
             <strong>Atendimentos com horário agendado</strong>
             <p>Psicopedagógico: 40 minutos · Pedagógico: 1 hora, conforme o tipo de atendimento.</p>
+            <div class="shift-pills">
+              <span class="shift-pill shift-morning"><span class="shift-icon">☀</span> Manhã · 8h às 11h</span>
+              <span class="shift-pill shift-afternoon"><span class="shift-icon">☁</span> Tarde · 14h às 17h</span>
+              <span class="shift-pill shift-evening"><span class="shift-icon">✦</span> Noite · 17h às 19h</span>
+            </div>
           </div>
         </div>
       </div>
